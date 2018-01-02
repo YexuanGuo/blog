@@ -1,0 +1,254 @@
+[ 2017-11-15T15:28:33+08:00 ] 127.0.0.1 /salecontrol/product
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0201s ]
+
+[ 2017-11-15T15:28:33+08:00 ] 127.0.0.1 /user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000238s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0086s ]
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-11-15T15:28:35+08:00 ] 127.0.0.1 /user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `t_sale_operation_account` WHERE ( Faccount = 'admin' ) LIMIT 1   [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_log` [ RunTime:0.0083s ]
+SQL: INSERT INTO `t_sale_operation_log` (`uid`,`account`,`content`,`type`,`create_at`) VALUES ('1','admin','{\"userAgent\":\"Mozilla\\/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/62.0.3202.89 Safari\\/537.36\",\"userIP\":\"127.0.0.1\"}','1','1510730915') [ RunTime:0.0078s ]
+SQL: UPDATE `t_sale_operation_account` SET `FlastLoginTime`='1510730915',`FloginCount`='102',`FlastLoginIp`='127.0.0.1' WHERE ( Faccount = 'admin' ) [ RunTime:0.0077s ]
+
+[ 2017-11-15T15:28:35+08:00 ] 127.0.0.1 /index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0154s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_menu` [ RunTime:0.0131s ]
+SQL: SELECT `id`,`name`,`class`,`level`,`controller` FROM `t_sale_operation_menu` WHERE ( status = 1 and pid = 0 ) ORDER BY id desc  [ RunTime:0.0151s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 51 and status = 1 )  [ RunTime:0.0103s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 32 and status = 1 )  [ RunTime:0.0096s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 11 and status = 1 )  [ RunTime:0.0082s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 2 and status = 1 )  [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_group_access` [ RunTime:0.0105s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM t_sale_operation_auth_group_access a INNER JOIN t_sale_operation_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT `condition`,`name` FROM `t_sale_operation_auth_rule` WHERE `id` IN ('7','34','3','73','82','4','19','5','18','81','72','79','80','83','84','85','86','87','35','1','12','52','64','65','2','54','55','59','60','8','9','56','57','58','70','10','51','61','62','67','66','69','74','75','78','76','77') AND `status` = 1  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+SQL: SHOW COLUMNS FROM `t_sale_accoutinfo` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `t_sale_accoutinfo` [ RunTime:0.0079s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_sale_accoutinfo` LIMIT 1   [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `t_sale_orderinfo` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_sale_orderinfo` LIMIT 1   [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `t_sale_supplies` [ RunTime:0.0089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_sale_supplies` LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_sale_orderinfo` WHERE ( order_status = 4 ) LIMIT 1   [ RunTime:0.0071s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: controllerName /data/webdata/sale_operation_admin/Application/Runtime/Cache/PeopleSoft/220f8b7fcd99d94a83c3aa30e9f4f42c.php 第 45 行.
+NOTIC: [8] Undefined variable: controllerName /data/webdata/sale_operation_admin/Application/Runtime/Cache/PeopleSoft/220f8b7fcd99d94a83c3aa30e9f4f42c.php 第 45 行.
+NOTIC: [8] Undefined variable: controllerName /data/webdata/sale_operation_admin/Application/Runtime/Cache/PeopleSoft/220f8b7fcd99d94a83c3aa30e9f4f42c.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012510s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000344s ]
+
+[ 2017-11-15T15:28:45+08:00 ] 127.0.0.1 /salecontrol/order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_menu` [ RunTime:0.0195s ]
+SQL: SELECT `id`,`name`,`class`,`level`,`controller` FROM `t_sale_operation_menu` WHERE ( status = 1 and pid = 0 ) ORDER BY id desc  [ RunTime:0.0141s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 51 and status = 1 )  [ RunTime:0.0077s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 32 and status = 1 )  [ RunTime:0.0076s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 11 and status = 1 )  [ RunTime:0.0125s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 2 and status = 1 )  [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_group_access` [ RunTime:0.0089s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM t_sale_operation_auth_group_access a INNER JOIN t_sale_operation_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT `condition`,`name` FROM `t_sale_operation_auth_rule` WHERE `id` IN ('7','34','3','73','82','4','19','5','18','81','72','79','80','83','84','85','86','87','35','1','12','52','64','65','2','54','55','59','60','8','9','56','57','58','70','10','51','61','62','67','66','69','74','75','78','76','77') AND `status` = 1  [ RunTime:0.0116s ]
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000274s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000329s ]
+
+[ 2017-11-15T15:28:46+08:00 ] 127.0.0.1 /salecontrol/order/query
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0169s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_menu` [ RunTime:0.0064s ]
+SQL: SELECT `id`,`name`,`class`,`level`,`controller` FROM `t_sale_operation_menu` WHERE ( status = 1 and pid = 0 ) ORDER BY id desc  [ RunTime:0.0084s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 51 and status = 1 )  [ RunTime:0.0068s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 32 and status = 1 )  [ RunTime:0.0083s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 11 and status = 1 )  [ RunTime:0.0088s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 2 and status = 1 )  [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_group_access` [ RunTime:0.0067s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM t_sale_operation_auth_group_access a INNER JOIN t_sale_operation_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_rule` [ RunTime:0.0081s ]
+SQL: SELECT `condition`,`name` FROM `t_sale_operation_auth_rule` WHERE `id` IN ('7','34','3','73','82','4','19','5','18','81','72','79','80','83','84','85','86','87','35','1','12','52','64','65','2','54','55','59','60','8','9','56','57','58','70','10','51','61','62','67','66','69','74','75','78','76','77') AND `status` = 1  [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `t_sale_orderinfo` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `t_sale_orderinfo` WHERE (  (  1=1 ) ) AND (  (  order_status_code = 1 ) ) LIMIT 0,10   [ RunTime:0.0089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_sale_orderinfo` LIMIT 1   [ RunTime:0.0164s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_sale_orderinfo` LIMIT 1   [ RunTime:0.0077s ]
+
+[ 2017-11-15T15:28:46+08:00 ] 127.0.0.1 /salecontrol/accout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_menu` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`class`,`level`,`controller` FROM `t_sale_operation_menu` WHERE ( status = 1 and pid = 0 ) ORDER BY id desc  [ RunTime:0.0106s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 51 and status = 1 )  [ RunTime:0.0071s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 32 and status = 1 )  [ RunTime:0.0086s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 11 and status = 1 )  [ RunTime:0.0083s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 2 and status = 1 )  [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_group_access` [ RunTime:0.0082s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM t_sale_operation_auth_group_access a INNER JOIN t_sale_operation_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_rule` [ RunTime:0.0071s ]
+SQL: SELECT `condition`,`name` FROM `t_sale_operation_auth_rule` WHERE `id` IN ('7','34','3','73','82','4','19','5','18','81','72','79','80','83','84','85','86','87','35','1','12','52','64','65','2','54','55','59','60','8','9','56','57','58','70','10','51','61','62','67','66','69','74','75','78','76','77') AND `status` = 1  [ RunTime:0.0087s ]
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000055s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005620s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005643s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2017-11-15T15:28:47+08:00 ] 127.0.0.1 /salecontrol/getaccoutlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000249s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_menu` [ RunTime:0.0086s ]
+SQL: SELECT `id`,`name`,`class`,`level`,`controller` FROM `t_sale_operation_menu` WHERE ( status = 1 and pid = 0 ) ORDER BY id desc  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 51 and status = 1 )  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 32 and status = 1 )  [ RunTime:0.0079s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 11 and status = 1 )  [ RunTime:0.0071s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 2 and status = 1 )  [ RunTime:0.0133s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_group_access` [ RunTime:0.0099s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM t_sale_operation_auth_group_access a INNER JOIN t_sale_operation_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_rule` [ RunTime:0.0133s ]
+SQL: SELECT `condition`,`name` FROM `t_sale_operation_auth_rule` WHERE `id` IN ('7','34','3','73','82','4','19','5','18','81','72','79','80','83','84','85','86','87','35','1','12','52','64','65','2','54','55','59','60','8','9','56','57','58','70','10','51','61','62','67','66','69','74','75','78','76','77') AND `status` = 1  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+SQL: SHOW COLUMNS FROM `t_sale_accoutinfo` [ RunTime:0.0171s ]
+SQL: SELECT * FROM `t_sale_accoutinfo`  [ RunTime:0.0104s ]
+
+[ 2017-11-15T16:36:30+08:00 ] 127.0.0.1 /salecontrol/accout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0113s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_menu` [ RunTime:0.0103s ]
+SQL: SELECT `id`,`name`,`class`,`level`,`controller` FROM `t_sale_operation_menu` WHERE ( status = 1 and pid = 0 ) ORDER BY id desc  [ RunTime:0.0092s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 51 and status = 1 )  [ RunTime:0.0103s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 32 and status = 1 )  [ RunTime:0.0084s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 11 and status = 1 )  [ RunTime:0.0088s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 2 and status = 1 )  [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_group_access` [ RunTime:0.0121s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM t_sale_operation_auth_group_access a INNER JOIN t_sale_operation_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_rule` [ RunTime:0.0154s ]
+SQL: SELECT `condition`,`name` FROM `t_sale_operation_auth_rule` WHERE `id` IN ('7','34','3','73','82','4','19','5','18','81','72','79','80','83','84','85','86','87','35','1','12','52','64','65','2','54','55','59','60','8','9','56','57','58','70','10','51','61','62','67','66','69','74','75','78','76','77') AND `status` = 1  [ RunTime:0.0122s ]
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2017-11-15T16:36:30+08:00 ] 127.0.0.1 /salecontrol/getaccoutlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_account` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_menu` [ RunTime:0.0083s ]
+SQL: SELECT `id`,`name`,`class`,`level`,`controller` FROM `t_sale_operation_menu` WHERE ( status = 1 and pid = 0 ) ORDER BY id desc  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 51 and status = 1 )  [ RunTime:0.0083s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 32 and status = 1 )  [ RunTime:0.0076s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 11 and status = 1 )  [ RunTime:0.0106s ]
+SQL: SELECT * FROM `t_sale_operation_menu` WHERE ( pid = 2 and status = 1 )  [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_group_access` [ RunTime:0.0078s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM t_sale_operation_auth_group_access a INNER JOIN t_sale_operation_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `t_sale_operation_auth_rule` [ RunTime:0.0073s ]
+SQL: SELECT `condition`,`name` FROM `t_sale_operation_auth_rule` WHERE `id` IN ('7','34','3','73','82','4','19','5','18','81','72','79','80','83','84','85','86','87','35','1','12','52','64','65','2','54','55','59','60','8','9','56','57','58','70','10','51','61','62','67','66','69','74','75','78','76','77') AND `status` = 1  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined offset: 3 /data/webdata/sale_operation_admin/Application/PeopleSoft/Library/BaseController.class.php 第 112 行.
+SQL: SHOW COLUMNS FROM `t_sale_accoutinfo` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `t_sale_accoutinfo`  [ RunTime:0.0077s ]
+
