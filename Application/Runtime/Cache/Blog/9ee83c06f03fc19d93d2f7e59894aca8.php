@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>代码起飞！</title>
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
-    <link type="text/css" href="css/nprogress.css" rel="stylesheet">
+    <title>Codedance！</title>
+    <link href="/Static/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/Static/css/style.css" type="text/css" rel="stylesheet">
+    <link type="text/css" href="/Static/css/nprogress.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.min.js" type="text/javascript"></script>
     <script src="js/respond.min.js" type="text/javascript"></script>
     <script src="js/selectivizr-min.js" type="text/javascript"></script>
     <![endif]-->
-    <link rel="apple-touch-icon-precomposed" href="images/icon/icon.png">
-    <link rel="shortcut icon" href="images/icon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/Static/images/icon/icon.png">
+    <link rel="shortcut icon" href="/Static/images/icon/favicon.ico">
     <meta name="Keywords" content="" />
     <meta name="description" content="" />
     <script type="text/javascript">
@@ -79,7 +79,7 @@
         <!--banner-->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <a href="content.html" target="_blank"><img src="images/img3.png" alt="" /></a>
+            <a href="content.html" target="_blank"><img src="/Static/images/img3.png" alt="" /></a>
             <div class="carousel-caption"> 欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术等 </div>
             <span class="carousel-bg"></span>
           </div>
@@ -98,50 +98,19 @@
       <div class="content-block new-content">
         <h2 class="title"><strong>最新文章</strong></h2>
         <div class="row">
-          <div class="news-list">
-            <div class="news-img col-xs-5 col-sm-5 col-md-4"> <a target="_blank" href=""><img src="images/img2.jpg" alt=""> </a> </div>
+          <?php foreach($articleList as $k=>$val){ ?>
+            <div class="news-list">
+            <div class="news-img col-xs-5 col-sm-5 col-md-4"> <a target="_blank" href=""><img src="/Static/images/img2.jpg" alt=""> </a> </div>
             <div class="news-info col-xs-7 col-sm-7 col-md-8">
               <dl>
-                <dt> <a href="" target="_blank" > 个人技术博客技术博客正式上线！ </a> </dt>
-                <dd><span class="name"><a href="" title="由 个人技术博客 发布" rel="author">个人技术博客</a></span> <span class="identity"></span> <span class="time"> 2015-10-19 </span></dd>
-                <dd class="text">欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术，还有CMS内容管理系统，包括但不限于这些还有CMS内容管理系统，包括但不限于这些。</dd>
+                <dt> <a href="/article/<?=$val['id'];?>" target="_blank" ><?=$val['title'];?></a> </dt>
+                <dd><span class="name"><a href="" title="由 个人技术博客 发布" rel="author">MoeTeam!</a></span> <span class="identity"></span> <span class="time"> 2015-10-19 </span></dd>
+                <dd class="text"><?=$val['title'];?></dd>
               </dl>
               <div class="news_bot col-sm-7 col-md-8"> <span class="tags visible-lg visible-md"> <a href="">本站</a> <a href="">个人技术博客</a> </span> <span class="look"> 共 <strong>2126</strong> 人围观，发现 <strong> 12 </strong> 个不明物体 </span> </div>
             </div>
           </div>
-          <div class="news-list">
-            <div class="news-img col-xs-5 col-sm-5 col-md-4"> <a target="_blank" href=""><img src="images/img2.jpg" alt=""> </a> </div>
-            <div class="news-info col-xs-7 col-sm-7 col-md-8">
-              <dl>
-                <dt> <a href="" target="_blank" > 个人技术博客技术博客正式上线！ </a> </dt>
-                <dd><span class="name"><a href="" title="由 个人技术博客 发布" rel="author">个人技术博客</a></span> <span class="identity"></span> <span class="time"> 2015-10-19 </span></dd>
-                <dd class="text">欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术，还有CMS内容管理系统，包括但不限于这些还有CMS内容管理系统，包括但不限于这些。</dd>
-              </dl>
-              <div class="news_bot col-sm-7 col-md-8"> <span class="tags visible-lg visible-md"> <a href="">本站</a> <a href="">个人技术博客</a> </span> <span class="look"> 共 <strong>2126</strong> 人围观，发现 <strong> 12 </strong> 个不明物体 </span> </div>
-            </div>
-          </div>
-          <div class="news-list">
-            <div class="news-img col-xs-5 col-sm-5 col-md-4"> <a target="_blank" href=""><img src="images/img2.jpg" alt=""> </a> </div>
-            <div class="news-info col-xs-7 col-sm-7 col-md-8">
-              <dl>
-                <dt> <a href="" target="_blank" > 个人技术博客技术博客正式上线！ </a> </dt>
-                <dd><span class="name"><a href="" title="由 个人技术博客 发布" rel="author">个人技术博客</a></span> <span class="identity"></span> <span class="time"> 2015-10-19 </span></dd>
-                <dd class="text">欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术，还有CMS内容管理系统，包括但不限于这些还有CMS内容管理系统，包括但不限于这些。</dd>
-              </dl>
-              <div class="news_bot col-sm-7 col-md-8"> <span class="tags visible-lg visible-md"> <a href="">本站</a> <a href="">个人技术博客</a> </span> <span class="look"> 共 <strong>2126</strong> 人围观，发现 <strong> 12 </strong> 个不明物体 </span> </div>
-            </div>
-          </div>
-          <div class="news-list">
-            <div class="news-img col-xs-5 col-sm-5 col-md-4"> <a target="_blank" href=""><img src="images/img2.jpg" alt=""> </a> </div>
-            <div class="news-info col-xs-7 col-sm-7 col-md-8">
-              <dl>
-                <dt> <a href="" target="_blank" > 个人技术博客技术博客正式上线！ </a> </dt>
-                <dd><span class="name"><a href="" title="由 个人技术博客 发布" rel="author">个人技术博客</a></span> <span class="identity"></span> <span class="time"> 2015-10-19 </span></dd>
-                <dd class="text">欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术，还有CMS内容管理系统，包括但不限于这些还有CMS内容管理系统，包括但不限于这些。</dd>
-              </dl>
-              <div class="news_bot col-sm-7 col-md-8"> <span class="tags visible-lg visible-md"> <a href="">本站</a> <a href="">个人技术博客</a> </span> <span class="look"> 共 <strong>2126</strong> 人围观，发现 <strong> 12 </strong> 个不明物体 </span> </div>
-            </div>
-          </div>
+          <?php } ?>
         </div>
         <!--<div class="news-more" id="pagination">
         	<a href="">查看更多</a>
@@ -201,9 +170,9 @@
 </section>
 <div><a href="javascript:;" class="gotop" style="display:none;"></a></div>
 <!--/返回顶部-->
-<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="js/nprogress.js" type="text/javascript" ></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/Static/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src="/Static/js/nprogress.js" type="text/javascript" ></script>
+<script src="/Static/js/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     //页面加载
     //$('body').show();

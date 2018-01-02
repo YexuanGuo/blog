@@ -1,0 +1,7 @@
+Application/Runtime/
+*.apk
+Application/Runtime/Cache/Blog
+Application/Runtime/Logs/Blog
+Public/Upload
+*.DS_Store
+.idea
