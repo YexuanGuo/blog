@@ -2,6 +2,7 @@ Application/Runtime/
 *.apk
 Application/Runtime/Cache/Blog
 Application/Runtime/Logs/Blog
+Application/Blog/Conf/config.php
 Public/Upload
 *.DS_Store
 .idea

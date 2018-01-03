@@ -20,7 +20,17 @@ class ArticleModel extends Model
      */
     public function getArticleToHomePage()
     {
-        $data = $this->limit(1,6)->where('1=1')->order('create_at desc')->select();
+        $data = $this->join('t_moe_category ON t_moe_article.category_id = t_moe_category.id')->field('t_moe_article.title as aa,
+        t_moe_article.category_id')
+            ->limit(1,6)->where('1=1')->order('create_at desc')->select();
+
+        //test
+        foreach ($data as $k=>$v)
+        {
+            unset($data[$k]['content']);
+        }
+
+        print_R($data);
         return $data;
     }
 
