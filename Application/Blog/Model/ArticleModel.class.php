@@ -50,4 +50,13 @@ class ArticleModel extends Model
             ->limit(1,6)->where($map)->order('create_at desc')->find();
         return $data;
     }
+
+    /**
+     * @return array|mixed
+     * 获取首页文章分类
+     */
+    public function getArticleCategoryToHomePage()
+    {
+        return D('category')->where('status=1')->getTreeData('level','id');
+    }
 }
