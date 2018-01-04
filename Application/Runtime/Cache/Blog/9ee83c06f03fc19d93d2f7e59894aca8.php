@@ -103,11 +103,11 @@
             <div class="news-img col-xs-5 col-sm-5 col-md-4"> <a target="_blank" href=""><img src="/Static/images/img2.jpg" alt=""> </a> </div>
             <div class="news-info col-xs-7 col-sm-7 col-md-8">
               <dl>
-                <dt> <a href="/article/<?=$val['id'];?>" target="_blank" ><?=$val['title'];?></a> </dt>
-                <dd><span class="name"><a href="" title="由 个人技术博客 发布" rel="author">MoeTeam!</a></span> <span class="identity"></span> <span class="time"> 2015-10-19 </span></dd>
+                <dt> <a href="/article/<?=$val['article_id'];?>" target="_blank" ><?=$val['title'];?></a> </dt>
+                <dd><span class="name"><a href="" title="由 个人技术博客 发布" rel="author"><?=$val['create_by'];?></a></span> <span class="identity"></span> <span class="time"><?=date('Y-m-d H:i:s',$val['create_at'] / 1000);?></span></dd>
                 <dd class="text"><?=$val['title'];?></dd>
               </dl>
-              <div class="news_bot col-sm-7 col-md-8"> <span class="tags visible-lg visible-md"> <a href="">本站</a> <a href="">个人技术博客</a> </span> <span class="look"> 共 <strong>2126</strong> 人围观，发现 <strong> 12 </strong> 个不明物体 </span> </div>
+              <div class="news_bot col-sm-7 col-md-8"> <span class="tags visible-lg visible-md"><a href=""><?=$val['article_category_name'];?></a> </span> <span class="look"> 共 <strong>2126</strong> 人围观，发现 <strong> 12 </strong> 个不明物体 </span> </div>
             </div>
           </div>
           <?php } ?>
@@ -122,7 +122,7 @@
 <!--/内容-->
 <aside class="sidebar visible-lg"><!--右侧>992px显示-->
     <div class="sentence"> <strong>每日一句</strong>
-        <h2>2015年11月1日 星期日</h2>
+        <h2><?=date('Y年m月d日',time());?></h2>
         <p>你是我人生中唯一的主角，我却只能是你故事中的一晃而过得路人甲。</p>
     </div>
     <div id="search" class="sidebar-block search" role="search">

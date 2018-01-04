@@ -3,55 +3,32 @@
   <div class="content-wrap"><!--内容-->
     <div class="content">
       <header class="news_header">
-        <h2>欢迎来到个人技术博客</h2>
+        <h2><?=$article['title']?></h2>
         <ul>
-          <li>admin 发布于 2015-06-29</li>
-          <li>栏目：<a href="" title="" target="_blank">网站前端</a></li>
-          <li>来源：<a href="" title="" target="_blank">互联网</a></li>
-          <li>共 <strong>2345</strong> 人围观 </li>
-          <li><strong>123</strong> 个不明物体</li>
+          <li><?=$article['create_by']?> 发布于 <?=date('Y-m-d H:i:s',$article['create_at'] / 1000);?></li>
+          <li>栏目：<a href="#" title="<?=$article['article_category_name'];?>" target="_blank"><?=$article['article_category_name'];?></a></li>
+          <!--<li>共 <strong>2345</strong> 人围观 </li>-->
+          <!--<li><strong>123</strong> 个不明物体</li>-->
         </ul>
       </header>
       <article class="news_content">
         <?=htmlspecialchars_decode($article['content']);?>
       </article>
-      <div class="reprint">转载请说明出处：<a href="" title="" target="_blank">个人技术博客</a> » <a href="" title="" target="_blank">欢迎来到个人技术博客</a></div>
-      <div class="zambia"><a href="javascript:;" name="zambia" rel=""><span class="glyphicon glyphicon-thumbs-up"></span> 赞（0）</a></div>
-      <div class="tags news_tags">标签： <span data-toggle="tooltip" data-placement="bottom" title="查看关于 本站 的文章"><a href="">本站</a></span> <span data-toggle="tooltip" data-placement="bottom" title="查看关于 技术博客 的文章"><a href="">技术博客</a></span> </div>
-      <nav class="page-nav"> <span class="page-nav-prev">上一篇<br />
-        <a href="" rel="prev">欢迎来到个人技术博客</a></span> <span class="page-nav-next">下一篇<br />
-        <a href="" rel="next">欢迎来到个人技术博客</a></span> </nav>
-      <!--<div class="content-block related-content visible-lg visible-md">-->
-        <!--<h2 class="title"><strong>相关推荐</strong></h2>-->
-        <!--<ul>-->
-          <!--<li><a target="_blank" href=""><img src="/Static/images/logo.jpg" alt="">-->
-            <!--<h3> 欢迎来到个人技术博客,在这里可以看到网站前端和后端的技术等 </h3>-->
-            <!--</a></li>-->
-          <!--<li><a target="_blank" href=""><img src="/Static/images/img1.jpg" alt="">-->
-            <!--<h3> 欢迎来到个人技术博客,在这里可以看到网站前端和后端的技术等 </h3>-->
-            <!--</a></li>-->
-          <!--<li><a target="_blank" href=""><img src="/Static/images/img3.jpg" alt="">-->
-            <!--<h3> 欢迎来到个人技术博客，在这里可以看到网站前端和后端的技术等 </h3>-->
-            <!--</a></li>-->
-          <!--<li><a target="_blank" href=""><img src="/Static/images/img2.jpg" alt="">-->
-            <!--<h3> 欢迎来到个人技术博客，在这里可以看到网站前端和后端的技术等 </h3>-->
-            <!--</a></li>-->
-          <!--<li><a target="_blank" href=""><img src="/Static/images/img2.jpg" alt="">-->
-            <!--<h3> 欢迎来到个人技术博客,在这里可以看到网站前端和后端的技术等 </h3>-->
-            <!--</a></li>-->
-          <!--<li><a target="_blank" href=""><img src="/Static/images/img3.jpg" alt="">-->
-            <!--<h3> 欢迎来到个人技术博客,在这里可以看到网站前端和后端的技术等 </h3>-->
-            <!--</a></li>-->
-          <!--<li><a target="_blank" href=""><img src="/Static/images/img1.jpg" alt="">-->
-            <!--<h3> 欢迎来到个人技术博客，在这里可以看到网站前端和后端的技术等 </h3>-->
-            <!--</a></li>-->
-          <!--<li><a target="_blank" href=""><img src="/Static/images/logo.jpg" alt="">-->
-            <!--<h3> 欢迎来到个人技术博客，在这里可以看到网站前端和后端的技术等 </h3>-->
-            <!--</a></li>-->
-        <!--</ul>-->
-      <!--</div>-->
+      <!--<div class="reprint">转载请说明出处：<a href="" title="" target="_blank">个人技术博客</a> » <a href="" title="" target="_blank">欢迎来到个人技术博客</a></div>-->
+      <div class="zambia"><a href="javascript:;" name="zambia" rel="">
+        <span class="glyphicon glyphicon-thumbs-up"></span> 赞（0）</a>
+      </div>
+      <div class="tags news_tags">标签：
+        <span data-toggle="tooltip" data-placement="bottom" title="查看关于 <?=$article['article_category_name'];?> 的文章">
+          <a href="#"><?=$article['article_category_name'];?></a>
+        </span>
+      </div>
+      <!--<nav class="page-nav"> <span class="page-nav-prev">上一篇<br />-->
+        <!--<a href="" rel="prev">欢迎来到个人技术博客</a></span> <span class="page-nav-next">下一篇<br />-->
+        <!--<a href="" rel="next">欢迎来到个人技术博客</a></span>-->
+      <!--</nav>-->
       <div class="content-block comment">
-        <h2 class="title"><strong>评论</strong></h2>
+        <h2 class="title"><strong>评论还没开发完呢，先别评论</strong></h2>
         <form action="comment.php" method="post" class="form-inline" id="comment-form">
           <div class="comment-title">
             <div class="form-group">

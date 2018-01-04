@@ -4,7 +4,7 @@ return array(
     'DB_TYPE' =>  'mysql',
     'DB_HOST' =>'127.0.0.1',
     'DB_USER' =>'root',
-    'DB_PWD' =>'admin123',
+    'DB_PWD' =>'',
     'DB_NAME' =>'moe_data_center',
     'DB_PORT' =>'3306',
     'DB_PREFIX'=>'t_moe_',
