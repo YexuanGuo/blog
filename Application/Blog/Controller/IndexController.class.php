@@ -1,7 +1,7 @@
 <?php
 namespace Blog\Controller;
-use Think\Controller;
-class IndexController extends Controller
+use Blog\Library\BaseController;
+class IndexController extends BaseController
 {
 
     public function index()
@@ -10,7 +10,6 @@ class IndexController extends Controller
         $this->assign(
             array(
                     'articleList'=>D('Article')->getArticleToHomePage(),
-                    'category'   =>D('Article')->getArticleCategoryToHomePage(),
                 )
         );
         $this->display('index');
