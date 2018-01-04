@@ -1,8 +1,8 @@
 Application/Runtime/
 *.apk
-Application/Runtime/Cache/Blog
 Application/Runtime/Logs/Blog
 Application/Blog/Conf/config.php
+Application/Runtime/Cache/Blog/
 Public/Upload
 .idea/workspace.xml
 *.DS_Store

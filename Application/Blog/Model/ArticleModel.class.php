@@ -24,7 +24,7 @@ class ArticleModel extends Model
         $data = $this->join('t_moe_category ON t_moe_article.category_id = t_moe_category.id')->join('t_moe_operation_account ON t_moe_article.create_by = t_moe_operation_account.Fid')
             ->field('t_moe_article.id as article_id,t_moe_article.title,t_moe_article.sort as article_sort,t_moe_article.create_at,
             t_moe_article.content,t_moe_category.name as article_category_name,t_moe_operation_account.Fnickname as create_by')
-            ->limit(1,6)->where('1=1')->order('create_at desc')->select();
+            ->limit(1,10)->where('1=1')->order('create_at desc')->select();
         //test
         //foreach ($data as $k=>$v)
         //{

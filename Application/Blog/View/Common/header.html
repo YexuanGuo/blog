@@ -17,6 +17,7 @@
     <link rel="shortcut icon" href="/Static/images/icon/favicon.ico">
     <meta name="Keywords" content="" />
     <meta name="description" content="" />
+
     <script type="text/javascript">
         //判断浏览器是否支持HTML5
         window.onload = function() {
