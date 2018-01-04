@@ -4,5 +4,6 @@ Application/Runtime/Cache/Blog
 Application/Runtime/Logs/Blog
 Application/Blog/Conf/config.php
 Public/Upload
+.idea/workspace.xml
 *.DS_Store
 .idea

@@ -100,7 +100,7 @@
         <div class="row">
           <?php foreach($articleList as $k=>$val){ ?>
             <div class="news-list">
-            <div class="news-img col-xs-5 col-sm-5 col-md-4"> <a target="_blank" href=""><img src="/Static/images/img2.jpg" alt=""> </a> </div>
+            <div class="news-img col-xs-5 col-sm-5 col-md-4"> <a target="_blank" href="/article/<?=$val['article_id'];?>"><img src="/Static/images/img2.jpg" alt=""> </a> </div>
             <div class="news-info col-xs-7 col-sm-7 col-md-8">
               <dl>
                 <dt> <a href="/article/<?=$val['article_id'];?>" target="_blank" ><?=$val['title'];?></a> </dt>
