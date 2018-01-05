@@ -1,6 +1,6 @@
 Application/Blog/Runtime/
 *.apk
-Application/Blog/Conf/config.php
+#Application/Blog/Conf/config.php
 Application/Runtime/
 Public/Upload
 .idea/workspace.xml
