@@ -6,7 +6,6 @@ class IndexController extends BaseController
 
     public function index()
     {
-//        print_R(D('Article')->getArticleCategoryToHomePage());die;
         $this->assign(
             array(
                     'articleList'=>D('Article')->getArticleToHomePage(),
