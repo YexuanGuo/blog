@@ -118,6 +118,7 @@
             '</div> ' +
             '</div>';
         if(oSize.replace(/(^\s*)|(\s*$)/g, "") != ''){
+            console.log('oSize is = '+oSize);
             $(this).parents('.reviewArea ').siblings('.comment-show').prepend(oHtml);
             $(this).siblings('.flex-text-wrap').find('.comment-input').prop('value','').siblings('pre').find('span').text('');
         }
