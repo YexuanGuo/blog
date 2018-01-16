@@ -87,4 +87,9 @@ class IndexController extends BaseController
         }
         return $tmp;
     }
+
+    public function postcomment()
+    {
+        return true;
+    }
 }

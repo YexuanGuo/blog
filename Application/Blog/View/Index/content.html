@@ -68,6 +68,8 @@
 <link rel="stylesheet" href="/Static/js/highlight/styles/solarized-dark.css">
 <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
 <include file="Common:footer" />
+<script type="text/javascript" src="/Static/js/jquery.flexText.js"></script>
+
 <!--textarea限制字数-->
 <script type="text/javascript">
     function keyUP(t){
@@ -118,7 +120,6 @@
             '</div> ' +
             '</div>';
         if(oSize.replace(/(^\s*)|(\s*$)/g, "") != ''){
-            console.log('oSize is = '+oSize);
             $(this).parents('.reviewArea ').siblings('.comment-show').prepend(oHtml);
             $(this).siblings('.flex-text-wrap').find('.comment-input').prop('value','').siblings('pre').find('span').text('');
         }
@@ -132,12 +133,12 @@
         //回复@
         var fhN = '回复@'+fhName;
         //var oInput = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.hf-con');
-        var fhHtml = '<div class="hf-con pull-left"> <textarea class="content comment-input hf-input" placeholder="" onkeyup="keyUP(this)"  style="min-height: 0px;"></textarea> <a href="javascript:;" class="hf-pl">评论</a></div>';
+        var fhHtml = '<div class="hf-con pull-left"> <textarea class="content_comment comment-input hf-input" placeholder="" onkeyup="keyUP(this)"  style="min-height: 0px;"></textarea> <a href="javascript:;" class="hf-pl">评论</a></div>';
         //显示回复
         if($(this).is('.hf-con-block')){
             $(this).parents('.date-dz-right').parents('.date-dz').append(fhHtml);
             $(this).removeClass('hf-con-block');
-//            $('.content').flexText();
+            $('.content_comment').flexText();
             $(this).parents('.date-dz-right').siblings('.hf-con').find('.pre').css('padding','6px 15px');
             //console.log($(this).parents('.date-dz-right').siblings('.hf-con').find('.pre'))
             //input框自动聚焦
@@ -177,7 +178,7 @@
         if(oHfVal.replace(/^ +| +$/g,'') == '' || oHfVal == oAllVal){
 
         }else {
-            $.getJSON("json/pl.json",function(data){
+            $.getJSON("/Static/js/pl.json",function(data){
                 var oAt = '';
                 var oHf = '';
                 $.each(data,function(n,v){
