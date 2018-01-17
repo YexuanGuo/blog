@@ -9,14 +9,13 @@
         <ul>
           <li><?=$article['create_by']?> 发布于 <?=date('Y-m-d H:i:s',$article['create_at'] / 1000);?></li>
           <li>栏目：<a href="#" title="<?=$article['article_category_name'];?>" target="_blank"><?=$article['article_category_name'];?></a></li>
-          <!--<li>共 <strong>2345</strong> 人围观 </li>-->
-          <!--<li><strong>123</strong> 个不明物体</li>-->
+          <li>共 <strong>2345</strong> 人围观 </li>
+          <li><strong>123</strong> 个不明物体</li>
         </ul>
       </header>
       <article class="news_content">
         <?=htmlspecialchars_decode($article['content']);?>
       </article>
-      <!--<div class="reprint">转载请说明出处：<a href="" title="" target="_blank">个人技术博客</a> » <a href="" title="" target="_blank">欢迎来到个人技术博客</a></div>-->
       <div class="zambia"><a href="javascript:;" name="zambia" rel="">
         <span class="glyphicon glyphicon-thumbs-up"></span> 赞（0）</a>
       </div>
@@ -25,10 +24,6 @@
           <a href="#"><?=$article['article_category_name'];?></a>
         </span>
       </div>
-      <!--<nav class="page-nav"> <span class="page-nav-prev">上一篇<br />-->
-        <!--<a href="" rel="prev">欢迎来到个人技术博客</a></span> <span class="page-nav-next">下一篇<br />-->
-        <!--<a href="" rel="next">欢迎来到个人技术博客</a></span>-->
-      <!--</nav>-->
       <div class="content-block comment">
         <div class="commentAll">
           <!--评论区域 begin-->

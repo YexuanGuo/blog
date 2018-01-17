@@ -19,14 +19,7 @@ class IndexController extends BaseController
      */
     public function article()
     {
-
         $article_id = filter_keyword(I('get.id'));
-        /*
-        $res = D('comments')->join(array('LEFT JOIN t_moe_reply ON t_moe_comments.id = t_moe_reply.comment_id'))
-            ->field('t_moe_comments.id,t_moe_comments.article_id,t_moe_comments.like_count,t_moe_comments.content as comment_content,
-            t_moe_comments.owner_user_id as commtent_owner_user_id,t_moe_comments.owner_user_id as comment_uid,t_moe_reply.content as reply_content,
-            t_moe_reply.reply_owner_uid,t_moe_reply.reply_target_uid')
-            ->where('article_id='.$article_id)->select();*/
 
         $comment_res = D('Comments')->where('article_id=' . $article_id)->select();
 
@@ -35,12 +28,6 @@ class IndexController extends BaseController
             $reply_res = D('Reply')->where('comment_id=' . $v['id'])->select();
             if (!empty($reply_res)) $comment_res[$k]['reply'] = $reply_res;
         }
-
-
-//
-//        print_R($comment_res);
-//
-//        die;
 
         $data = D('Article')->getArticleDetailById($article_id);
         $this->assign(
