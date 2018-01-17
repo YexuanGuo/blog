@@ -16,36 +16,17 @@ class IndexController extends BaseController
 
     /**
      * 文章详情
-     *       {
-                "id": 3,
-                "uid":12313131,
-                "parent": null,
-                "created": "2015-01-03",
-                "modified": "2015-01-03",
-                "content": "但愿人长久，千里共婵娟！",
-                "pings": [3],
-                "creator": 1,
-                "fullname": "You",
-                "profile_picture_url": "https://app.viima.com/static/media/user_profiles/user-icon.png",
-                "created_by_admin": false,
-                "created_by_current_user": true,
-                "upvote_count": 2,
-                "user_has_upvoted": true,
-                "is_new": false
-            },
      */
     public function article()
     {
 
-//        echo "<pre>";
         $article_id = filter_keyword(I('get.id'));
         /*
         $res = D('comments')->join(array('LEFT JOIN t_moe_reply ON t_moe_comments.id = t_moe_reply.comment_id'))
             ->field('t_moe_comments.id,t_moe_comments.article_id,t_moe_comments.like_count,t_moe_comments.content as comment_content,
             t_moe_comments.owner_user_id as commtent_owner_user_id,t_moe_comments.owner_user_id as comment_uid,t_moe_reply.content as reply_content,
             t_moe_reply.reply_owner_uid,t_moe_reply.reply_target_uid')
-            ->where('article_id='.$article_id)->select();
-        */
+            ->where('article_id='.$article_id)->select();*/
 
         $comment_res = D('Comments')->where('article_id=' . $article_id)->select();
 
@@ -56,15 +37,16 @@ class IndexController extends BaseController
         }
 
 
-
-        //print_R($comment_res);
-
-        //die;
+//
+//        print_R($comment_res);
+//
+//        die;
 
         $data = D('Article')->getArticleDetailById($article_id);
         $this->assign(
             array(
-                'article'=>$data
+                'article'      =>$data,
+                'comment_res'  =>$comment_res,
             )
         );
         $this->display('content');

@@ -39,41 +39,47 @@
           <!--评论区域 end-->
           <!--回复区域 begin-->
           <div class="comment-show">
-            <div class="comment-show-con clearfix">
+            <?php foreach($comment_res as $k=>$v) {?>
+              <div class="comment-show-con clearfix">
               <div class="comment-show-con-img pull-left"><img src="/Static/images/xiongbenxiong.png" alt=""></div>
               <div class="comment-show-con-list pull-left clearfix">
                 <div class="pl-text clearfix">
                   <a href="#" class="comment-size-name">张三 : </a>
-                  <span class="my-pl-con">&nbsp;来啊 造作啊!</span>
+                  <span class="my-pl-con">&nbsp;<?=$v['content'];?></span>
                 </div>
                 <div class="date-dz">
-                  <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                  <span class="date-dz-left pull-left comment-time"><?=$v['created_at'];?></span>
                   <div class="date-dz-right pull-right comment-pl-block">
                     <a href="javascript:;" class="removeBlock">删除</a>
                     <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>
                     <span class="pull-left date-dz-line">|</span>
-                    <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a>
+                    <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num"><?=$v['like_count'];?></i>)</a>
                   </div>
                 </div>
                 <div class="hf-list-con">
-                  <div class="all-pl-con">
+                  <?php if(!empty($v['reply'])){
+                      foreach($v['reply']as $key=>$val){
+                  ?>
+                    <div class="all-pl-con">
                     <div class="pl-text hfpl-text clearfix">
-                      <a href="#" class="comment-size-name">我的名字 : </a>
-                      <span class="my-pl-con">回复<a href="#" class="atName">@张三 </a> :  1231313</span>
+                        <a href="#" class="comment-size-name">我的名字 : </a>
+                        <span class="my-pl-con">回复<a href="#" class="atName">@张三 </a> :  <?=$val['content'];?></span>
                     </div>
                     <div class="date-dz">
-                      <span class="date-dz-left pull-left comment-time">2018-1-17 11:22:37</span>
+                      <span class="date-dz-left pull-left comment-time"><?=date('Y-m-d H:i:s',time());?></span>
                       <div class="date-dz-right pull-right comment-pl-block">
                         <a href="javascript:;" class="removeBlock">删除</a>
                         <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>
                         <span class="pull-left date-dz-line">|</span>
-                        <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a>
+                        <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num"><?=$val['like_count'];?></i>)</a>
                       </div>
                     </div>
                   </div>
+                  <?php }} ?>
                 </div>
               </div>
             </div>
+            <?php } ?>
           </div>
           <!--回复区域 end-->
         </div>
