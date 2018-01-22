@@ -94,9 +94,10 @@ class CommentsModel extends Model
             ->where('article_id=' . $article_id)
             ->order('t_moe_comments.created_at desc')
             ->select();
-
         foreach ($comment_res as $k => $v)
         {
+            //http://bbs.csdn.net/topics/390050760/
+            //select a.id,a.name from a left join (select b.killer_user_id as user_id from b union select b.killed_user_id user_id from b) c on a.id=c.user_id
             $comment_res[$k]['created_at'] = date('Y-m-d H:i:s',($v['created_at'] / 1000));
             $reply_res = D('Reply')->where('comment_id=' . $v['comment_id'])->select();
             if (!empty($reply_res)) $comment_res[$k]['reply'] = $reply_res;
