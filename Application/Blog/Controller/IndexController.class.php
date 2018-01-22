@@ -19,17 +19,12 @@ class IndexController extends BaseController
      */
     public function article()
     {
-        $article_id = filter_keyword(I('get.id'));
+        $article_id  = filter_keyword(I('get.id'));
 
-        $comment_res = D('Comments')->where('article_id=' . $article_id)->select();
+        $comment_res = D('Comments')->getCommentsResByArticleId($article_id);
+        $data        = D('Article')->getArticleDetailById($article_id);
 
-
-        foreach ($comment_res as $k => $v) {
-            $reply_res = D('Reply')->where('comment_id=' . $v['id'])->select();
-            if (!empty($reply_res)) $comment_res[$k]['reply'] = $reply_res;
-        }
-
-        $data = D('Article')->getArticleDetailById($article_id);
+//        print_R($comment_res);die;
         $this->assign(
             array(
                 'article'      =>$data,
@@ -57,8 +52,4 @@ class IndexController extends BaseController
         return $tmp;
     }
 
-    public function postcomment()
-    {
-        return true;
-    }
 }
