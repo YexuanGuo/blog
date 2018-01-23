@@ -94,12 +94,21 @@ class CommentsModel extends Model
             ->where('article_id=' . $article_id)
             ->order('t_moe_comments.created_at desc')
             ->select();
+
         foreach ($comment_res as $k => $v)
         {
-            //http://bbs.csdn.net/topics/390050760/
-            //select a.id,a.name from a left join (select b.killer_user_id as user_id from b union select b.killed_user_id user_id from b) c on a.id=c.user_id
+            $reply_sql = 'SELECT 
+                                A.id,A.content,A.comment_id,A.like_count as reply_like_count,A.reply_owner_uid,
+                                A.reply_target_uid,B.nickname as reply_owner_name,B1.nickname as reply_target_name 
+                                FROM t_moe_reply as A LEFT JOIN t_moe_accout B ON A.reply_owner_uid=B.id 
+                                LEFT JOIN t_moe_accout B1 ON A.reply_target_uid = B1.id 
+                                where A.comment_id = '.$v['comment_id'];
+
+            $reply_res = M()->query($reply_sql);
+
             $comment_res[$k]['created_at'] = date('Y-m-d H:i:s',($v['created_at'] / 1000));
-            $reply_res = D('Reply')->where('comment_id=' . $v['comment_id'])->select();
+
+            //$reply_res = D('Reply')->where('comment_id=' . $v['comment_id'])->select();
             if (!empty($reply_res)) $comment_res[$k]['reply'] = $reply_res;
         }
 

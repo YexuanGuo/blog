@@ -24,7 +24,6 @@ class IndexController extends BaseController
         $comment_res = D('Comments')->getCommentsResByArticleId($article_id);
         $data        = D('Article')->getArticleDetailById($article_id);
 
-//        print_R($comment_res);die;
         $this->assign(
             array(
                 'article'      =>$data,
