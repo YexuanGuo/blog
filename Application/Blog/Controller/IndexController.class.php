@@ -4,6 +4,9 @@ use Blog\Library\BaseController;
 class IndexController extends BaseController
 {
 
+    /**
+     * 首页相关逻辑
+     */
     public function index()
     {
         $this->assign(
@@ -32,24 +35,6 @@ class IndexController extends BaseController
         );
 
         $this->display('content');
-    }
-
-    /**
-     * @param $data array  数据
-     * @param $parent  string 父级元素的名称 如 parent_id
-     * @param $son     string 子级元素的名称 如 comm_id
-     * @param $pid     int    父级元素的id 实际上传递元素的主键
-     * @return array
-     */
-    public function getSubTree($data , $parent , $son , $pid = 0) {
-        $tmp = array();
-        foreach ($data as $key => $value) {
-            if($value[$parent] == $pid) {
-                $value['child'] =  $this->getSubTree($data , $parent , $son , $value[$son]);
-                $tmp[] = $value;
-            }
-        }
-        return $tmp;
     }
 
 }
