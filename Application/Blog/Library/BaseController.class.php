@@ -20,8 +20,10 @@ class BaseController extends Controller
 
     protected  function _initialize()
     {
+//        print_R(D('Comments')->getNewestCommentsToHomePage());die;
         $this->assign(array(
-            'category'   =>D('Article')->getArticleCategoryToHomePage(),
+            'category'   =>D('Article')->getArticleCategoryToHomePage(),    //首页分类
+            'hotArticle' =>D('Article')->getHotArticleToHomePage(),
         ));
 
     }

@@ -108,7 +108,39 @@ class CommentsModel extends Model
 
             $comment_res[$k]['created_at'] = date('Y-m-d H:i:s',($v['created_at'] / 1000));
 
-            //$reply_res = D('Reply')->where('comment_id=' . $v['comment_id'])->select();
+            if (!empty($reply_res)) $comment_res[$k]['reply'] = $reply_res;
+        }
+
+        return $comment_res;
+    }
+
+
+    /**
+     * @return mixed
+     * 获取首页最新评论
+     */
+    public function getNewestCommentsToHomePage()
+    {
+        $comment_res = D('Comments')
+            ->join('t_moe_accout ON t_moe_comments.owner_user_id = t_moe_accout.id')
+            ->field('t_moe_comments.id as comment_id,t_moe_comments.article_id,t_moe_comments.owner_user_id,t_moe_comments.content,
+            t_moe_comments.like_count,t_moe_comments.created_at,t_moe_accout.nickname')
+            ->order('t_moe_comments.created_at desc')
+            ->select();
+
+        foreach ($comment_res as $k => $v)
+        {
+            $reply_sql = 'SELECT 
+                                A.id,A.content,A.comment_id,A.like_count as reply_like_count,A.reply_owner_uid,
+                                A.reply_target_uid,B.nickname as reply_owner_name,B1.nickname as reply_target_name 
+                                FROM t_moe_reply as A LEFT JOIN t_moe_accout B ON A.reply_owner_uid=B.id 
+                                LEFT JOIN t_moe_accout B1 ON A.reply_target_uid = B1.id 
+                                where A.comment_id = '.$v['comment_id'];
+
+            $reply_res = M()->query($reply_sql);
+
+            $comment_res[$k]['created_at'] = date('Y-m-d H:i:s',($v['created_at'] / 1000));
+
             if (!empty($reply_res)) $comment_res[$k]['reply'] = $reply_res;
         }
 

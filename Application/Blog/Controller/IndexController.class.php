@@ -30,6 +30,7 @@ class IndexController extends BaseController
                 'comment_res'  =>$comment_res,
             )
         );
+
         $this->display('content');
     }
 

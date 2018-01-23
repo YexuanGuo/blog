@@ -59,4 +59,14 @@ class ArticleModel extends Model
     {
         return D('category')->where('status=1')->getTreeData('level','id');
     }
+
+    /**
+     * @return mixed
+     * 获取首页热门文章
+     */
+    public function getHotArticleToHomePage()
+    {
+        $data = D('article')->field('id,title')->where('status=1')->limit(1,6)->order('create_at desc')->select();
+        return $data;
+    }
 }

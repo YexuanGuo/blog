@@ -17,26 +17,33 @@
     <div class="sidebar-block recommend">
         <h2 class="title"><strong>热门推荐</strong></h2>
         <ul>
-            <li><a target="_blank" href=""> <span class="thumb"><img src="images/icon/icon.png" alt=""></span> <span class="text">个人技术博客技术博客的SHORTCUT和ICON图标 ...</span> <span class="text-muted">阅读(2165)</span></a></li>
-            <li><a target="_blank" href=""> <span class="thumb"><img src="images/icon/icon.png" alt=""></span> <span class="text">个人技术博客技术博客的SHORTCUT和ICON图标 ...</span> <span class="text-muted">阅读(2165)</span></a></li>
-            <li><a target="_blank" href=""> <span class="thumb"><img src="images/icon/icon.png" alt=""></span> <span class="text">个人技术博客技术博客的SHORTCUT和ICON图标 ...</span> <span class="text-muted">阅读(2165)</span></a></li>
-            <li><a target="_blank" href=""> <span class="thumb"><img src="images/icon/icon.png" alt=""></span> <span class="text">个人技术博客技术博客的SHORTCUT和ICON图标 ...</span> <span class="text-muted">阅读(2165)</span></a></li>
-            <li><a target="_blank" href=""> <span class="thumb"><img src="images/icon/icon.png" alt=""></span> <span class="text">个人技术博客技术博客的SHORTCUT和ICON图标 ...</span> <span class="text-muted">阅读(2165)</span></a></li>
+            <?php foreach($hotArticle as $k=>$v){?>
+                <li>
+                    <a target="_blank" href="/Article/<?=$v['id'];?>">
+                        <span class="thumb">
+                            <img src="/Static/images/xiongbenxiong.png" alt="">
+                        </span>
+                        <span class="text"><?=$v['title'];?></span>
+                        <span class="text-muted">阅读(2165)
+                        </span>
+                    </a>
+                </li>
+            <?php } ?>
         </ul>
     </div>
     <div class="sidebar-block comment">
-        <h2 class="title"><strong>最新评论</strong></h2>
+        <h2 class="title"><strong>友情链接</strong></h2>
         <ul>
-            <li data-toggle="tooltip" data-placement="top" title="站长的评论"><a target="_blank" href=""><span class="face"><img src="images/icon/logo.png" alt=""></span> <span class="text"><strong>个人技术博客站长</strong> (2015-10-18) 说：<br />
-          欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术等 ...</span></a></li>
-            <li data-toggle="tooltip" data-placement="top" title="读者墙上的评论"><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span> <span class="text"><strong>个人技术博客站长</strong> (2015-10-18) 说：<br />
-          欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术等 ...</span></a></li>
-            <li data-toggle="tooltip" data-placement="top" title="个人技术博客技术博客的SHORTCUT和ICON图标...的评论"><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span> <span class="text"><strong>个人技术博客站长</strong> (2015-10-18) 说：<br />
-          欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术等 ...</span></a></li>
-            <li data-toggle="tooltip" data-placement="top" title="个人技术博客技术博客的SHORTCUT和ICON图标...的评论"><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span> <span class="text"><strong>个人技术博客站长</strong> (2015-10-18) 说：<br />
-          欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术等 ...</span></a></li>
-            <li data-toggle="tooltip" data-placement="top" title="个人技术博客技术博客的SHORTCUT和ICON图标...的评论"><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span> <span class="text"><strong>个人技术博客站长</strong> (2015-10-18) 说：<br />
-          欢迎来到个人技术博客技术博客，在这里可以看到网站前端和后端的技术等 ...</span></a></li>
+            <li data-toggle="tooltip" data-placement="top" title="Tencent Mobile Games!">
+                <a target="_blank" href="">
+                    <span class="face">
+                        <img src="/Static/images/xiongbenxiong.png" alt="">
+                    </span>
+                    <span class="text">
+                        <strong>Tencent Mobile Games!</strong>
+                        <br />HelloWorld! ...</span>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>
