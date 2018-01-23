@@ -89,7 +89,7 @@ header.hidden-xs{padding-top: 84px;}
 	top: 0;
 	/*bottom: 0;*/
 	/*width: 190px;*/
-	background-color: #f6f6f6;
+	background-color: #292b36;
 	z-index: 99;
 	display: block;
 }
@@ -99,7 +99,7 @@ header.hidden-xs{padding-top: 84px;}
 	overflow: hidden;
 	height: 84px;
 	line-height: 300px;
-	background: url(../images/head_logo.png) no-repeat 50% 50%;
+	background: url(../images/head_logo2.png) no-repeat 50% 50%;
 }
 .header .logo a {
 	-moz-transition: all 0.8s ease-in-out;
