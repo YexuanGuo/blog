@@ -18,11 +18,10 @@ class Page{
     public $totalPages; // 分页总页面数
     public $rollPage   = 11;// 分页栏每页显示的页数
 	public $lastSuffix = true; // 最后一页是否显示总页数
-
     private $p       = 'p'; //分页参数名
-    private $url     = ''; //当前链接URL
+    public $url     = ''; //当前链接URL
     private $nowPage = 1;
-
+    public $routerUrl;          //路由前缀
 	// 分页显示定制
     private $config  = array(
         'header' => '<span class="rows">共 %TOTAL_ROW% 条记录</span>',
@@ -79,7 +78,11 @@ class Page{
 
         /* 生成URL */
         $this->parameter[$this->p] = '[PAGE]';
-        $this->url = U(ACTION_NAME, $this->parameter);
+        //$this->url = U(ACTION_NAME, $this->parameter);
+
+        //LastModify:2018年01月24日17:32:51,短路由分页方式
+        $this->url = $this->routerUrl?str_replace('[PAGE]',urlencode('[PAGE]'),$this->routerUrl):U(ACTION_NAME, $this->parameter);
+
         /* 计算分页信息 */
         $this->totalPages = ceil($this->totalRows / $this->listRows); //总页数
         if(!empty($this->totalPages) && $this->nowPage > $this->totalPages) {
@@ -124,7 +127,7 @@ class Page{
             if($page > 0 && $page != $this->nowPage){
 
                 if($page <= $this->totalPages){
-                    $link_page .= '<a class="num" href="' . $this->url($page) . '">' . $page . '</a>';
+                    $link_page .= '<a class="num" href="' . $this->url($page.'') . '">' . $page . '</a>';
                 }else{
                     break;
                 }

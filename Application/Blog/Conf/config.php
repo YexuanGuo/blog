@@ -18,6 +18,7 @@ return array(
 //    'DB_FIELD_CACHE'=>false,
 //    'HTML_CACHE_ON'=>false,
     'URL_ROUTE_RULES'=>array(
-        'article/:id'               => 'Index/article',
+        'article/:id'       => 'Index/article',
+        '/^home\/list-(\d{1,})$/'=>'Index/index?p=:1',
     ),
 );
