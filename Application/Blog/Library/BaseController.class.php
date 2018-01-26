@@ -8,9 +8,6 @@
 
 namespace Blog\Library;
 use Think\Controller;
-use Think\Think;
-use Think\Db;
-use Think\Cache;
 
 class BaseController extends Controller
 {
@@ -20,14 +17,16 @@ class BaseController extends Controller
 
     protected  function _initialize()
     {
-//        print_R(D('Comments')->getNewestCommentsToHomePage());die;
         $this->assign(array(
             'category'   =>D('Article')->getArticleCategoryToHomePage(),    //首页分类
             'hotArticle' =>D('Article')->getHotArticleToHomePage(),
         ));
-
     }
 
+    public function _empty()
+    {
+        exit('404 not found!');
+    }
 
     /**
      * @return mixed
@@ -99,4 +98,5 @@ class BaseController extends Controller
         }
         return $obj;
     }
+
 }

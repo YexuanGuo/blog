@@ -6,6 +6,8 @@ class IndexController extends BaseController
 
     private $_home_page_size = 10;
     private $_home_page_url  = '/home/list-[PAGE].html';
+
+
     /**
      * 首页相关逻辑
      */
@@ -40,9 +42,7 @@ class IndexController extends BaseController
         $this->display('index');
     }
 
-    /**
-     * 文章详情
-     */
+
     public function article()
     {
         $article_id  = filter_keyword(I('get.id'));
@@ -62,6 +62,16 @@ class IndexController extends BaseController
 
     public function articleListByCategory()
     {
-        echo 11;
+        $category_id   = filter_keyword(I('get.id'));
+        $article_list  = D('Article')->getArticleListByCategoryId($category_id);
+        $category_name = D('Article')->getCategoryNameByCategoryId($category_id);
+
+        $this->assign(
+            array(
+                'articleList'  =>$article_list,
+                'categiryName' =>$category_name,
+            )
+        );
+        $this->display('category_article_list');
     }
 }

@@ -59,7 +59,11 @@
 <script src="/Static/js/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="/Static/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/Static/js/jquery.dropdown.js" type="text/javascript"></script>
+<script src="/Static/js/nprogress.js" type="text/javascript" ></script>
 <script type="text/javascript">
+    $('.version').text(NProgress.version);
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
     //返回顶部按钮
     $(function(){
         $(window).scroll(function(){
