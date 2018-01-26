@@ -23,9 +23,12 @@ class BaseController extends Controller
         ));
     }
 
+    /**
+     * 空操作
+     */
     public function _empty()
     {
-        exit('404 not found!');
+       $this->display('404/index');
     }
 
     /**

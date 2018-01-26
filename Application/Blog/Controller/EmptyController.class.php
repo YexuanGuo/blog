@@ -10,9 +10,12 @@ namespace Blog\Controller;
 use Blog\Library\BaseController;
 class EmptyController extends BaseController
 {
-
+    /**
+     * 空控制器
+     * __call
+     */
     public function index()
     {
-        echo 'empty controll!';
+        $this->display('404/index');
     }
 }
