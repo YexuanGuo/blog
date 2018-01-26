@@ -7,3 +7,5 @@ Public/Upload
 *.DS_Store
 .idea
 wwdc-2016
+*.ttf
+image.php

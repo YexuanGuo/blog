@@ -60,4 +60,8 @@ class IndexController extends BaseController
         $this->display('content');
     }
 
+    public function articleListByCategory()
+    {
+        echo 11;
+    }
 }
