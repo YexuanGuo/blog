@@ -29,12 +29,12 @@ body::-webkit-scrollbar-thumb {
  background:#999;
 }
 a {
-	cursor: pointer;
-	transition: all 0.30s ease-in-out;
-	-webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
+	/*cursor: pointer;*/
+	/*transition: all 0.30s ease-in-out;*/
+	/*-webkit-transition: all 0.30s ease-in-out;*/
+	/*-moz-transition: all 0.30s ease-in-out;*/
+	/*-o-transition: all 0.30s ease-in-out;*/
+	/*-ms-transition: all 0.30s ease-in-out;*/
 }
 li {
 	display: list-item;
@@ -102,11 +102,11 @@ header.hidden-xs{padding-top: 84px;}
 	background: url(../images/head_logo2.png) no-repeat 50% 50%;
 }
 .header .logo a {
-	-moz-transition: all 0.8s ease-in-out;
-	-webkit-transition: all 0.8s ease-in-out;
-	-o-transition: all 0.8s ease-in-out;
-	-ms-transition: all 0.8s ease-in-out;
-	transition: all 0.8s ease-in-out;
+	/*-moz-transition: all 0.8s ease-in-out;*/
+	/*-webkit-transition: all 0.8s ease-in-out;*/
+	/*-o-transition: all 0.8s ease-in-out;*/
+	/*-ms-transition: all 0.8s ease-in-out;*/
+	/*transition: all 0.8s ease-in-out;*/
 }
 .header .logo a:hover {
 	-moz-transform: rotate(360deg);
