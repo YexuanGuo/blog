@@ -55,7 +55,7 @@
                 <li><a href="/category/<?=$val['id'];?>"><span class="glyphicon"><?=$val['name'];?></span></a>
                         <ul class="sub_menu">
                             <?php if(!empty($val['_data'])){ foreach($val['_data'] as $key=>$levelTwo){ ?>
-                                <li><a href="/category/<?=$levelTwo['id'];?>"><?=$levelTwo['name'];?></a></li>
+                                <li><a href="/category/<?=$levelTwo['id'];?>" style="color: #0e2231;"><?=$levelTwo['name'];?></a></li>
                             <?php }} ?>
                         </ul>
                 </li>
