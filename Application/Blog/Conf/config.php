@@ -21,5 +21,6 @@ return array(
         'article/:id'       => 'Index/article',
         '/^home\/list-(\d{1,})$/'=>'Index/index?p=:1',
         'category/:id'       => 'Index/articleListByCategory',
+        '404'       => 'Emtpy/index',
     ),
 );

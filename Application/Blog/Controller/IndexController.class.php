@@ -64,6 +64,12 @@ class IndexController extends BaseController
     {
         $category_id   = filter_keyword(I('get.id'));
         $article_list  = D('Article')->getArticleListByCategoryId($category_id);
+
+        if(empty($article_list))
+        {
+            $this->redirect('404');
+        }
+
         $category_name = D('Article')->getCategoryNameByCategoryId($category_id);
 
         $this->assign(
