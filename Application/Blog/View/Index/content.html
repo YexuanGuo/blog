@@ -9,21 +9,11 @@
         <ul>
           <li><?=$article['create_by']?> 发布于 <?=date('Y-m-d H:i:s',$article['create_at'] / 1000);?></li>
           <li>分类：<a href="#" title="<?=$article['article_category_name'];?>" target="_blank"><?=$article['article_category_name'];?></a></li>
-          <!--<li>共 <strong>2345</strong> 人围观 </li>-->
-          <!--<li><strong>123</strong> 个不明物体</li>-->
         </ul>
       </header>
       <article class="news_content">
         <?=htmlspecialchars_decode($article['content']);?>
       </article>
-      <!--<div class="zambia"><a href="javascript:;" name="zambia" rel="">-->
-        <!--<span class="glyphicon glyphicon-thumbs-up"></span> 赞（0）</a>-->
-      <!--</div>-->
-      <!--<div class="tags news_tags">标签：-->
-        <!--<span data-toggle="tooltip" data-placement="bottom" title="查看关于 <?=$article['article_category_name'];?> 的文章">-->
-          <!--<a href="#"><?=$article['article_category_name'];?></a>-->
-        <!--</span>-->
-      <!--</div>-->
       <div class="content-block comment">
         <div class="commentAll">
           <!--评论区域 begin-->
